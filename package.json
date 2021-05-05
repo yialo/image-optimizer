@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "gulp imagemin -f ./scripts/imagemin.js"
+  },
+  "devDependencies": {
+    "@squoosh/cli": "0.6.4",
+    "gulp": "4.0.2",
+    "gulp-imagemin": "7.1.0",
+    "imagemin-jpegtran": "7.0.0",
+    "imagemin-mozjpeg": "9.0.0",
+    "imagemin-pngquant": "9.0.2",
+    "imagemin-svgo": "9.0.0",
+    "imagemin-zopfli": "7.0.0"
+  },
+  "engines": {
+    "node": "14"
+  }
+}

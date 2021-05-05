@@ -1,0 +1,13 @@
+# npm files
+node_modules/
+npm-debug.*
+
+# env files
+.env.local
+.env.*.local
+
+# Service files
+*.log*
+
+# msc
+/minify/
