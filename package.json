@@ -4,7 +4,7 @@
     "start": "gulp imagemin -f ./scripts/imagemin.js"
   },
   "devDependencies": {
-    "@squoosh/cli": "0.6.4",
+    "@squoosh/cli": "0.7.1",
     "gulp": "4.0.2",
     "gulp-imagemin": "7.1.0",
     "imagemin-jpegtran": "7.0.0",
