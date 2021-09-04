@@ -1,25 +1,21 @@
-'use strict';
+import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
+import jpegtran from  'imagemin-jpegtran';
+import mozjpeg from  'imagemin-mozjpeg';
+import pngquant from  'imagemin-pngquant';
+import svgo from  'imagemin-svgo';
+import zopfli from  'imagemin-zopfli';
 
-const { src, dest } = require('gulp');
-const imagemin = require('gulp-imagemin');
-const jpegtran = require('imagemin-jpegtran');
-const mozjpeg = require('imagemin-mozjpeg');
-const pngquant = require('imagemin-pngquant');
-const svgo = require('imagemin-svgo');
-const zopfli = require('imagemin-zopfli');
+import svgoConfig from '../svgo.config.js';
 
-const svgoOptions = require('../svgo.config');
-
-const minify = () => (
-  src('../minify/in/*.{jp?(e)g,png,svg}')
+export const minify = () => (
+  gulp.src('../minify/in/*.{jp?(e)g,png,svg}')
     .pipe(imagemin([
       jpegtran({ progressive: true }),
       mozjpeg({ quality: 90 }),
       pngquant({ speed: 1, quality: [0.8, 0.8] }),
-      svgo(svgoOptions),
+      svgo(svgoConfig),
       zopfli({ more: true }),
     ]))
-    .pipe(dest('../minify/out'))
+    .pipe(gulp.dest('../minify/out'))
 );
-
-module.exports.imagemin = minify;

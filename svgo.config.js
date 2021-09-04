@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default {
   datauri: 'base64',
   js2svg: {
     indent: 2,
@@ -49,7 +47,11 @@ module.exports = {
     { name: 'sortAttrs', active: false },
     { name: 'sortDefsChildren', active: true },
     { name: 'removeDimensions', active: true },
-    { name: 'removeAttrs', active: true },
+    {
+      name: 'removeAttrs',
+      active: false,
+      params: { attrs: [] },
+    },
     { name: 'removeAttributesBySelector', active: false },
     { name: 'removeElementsByAttr', active: false },
     { name: 'addClassesToSVGElement', active: false },

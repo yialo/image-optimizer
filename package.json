@@ -1,12 +1,13 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
-    "start": "gulp imagemin -f ./scripts/imagemin.js"
+    "start": "gulp minify -f ./scripts/imagemin.js"
   },
   "devDependencies": {
-    "@squoosh/cli": "0.7.1",
+    "@squoosh/cli": "0.7.2",
     "gulp": "4.0.2",
-    "gulp-imagemin": "7.1.0",
+    "gulp-imagemin": "8.0.0",
     "imagemin-jpegtran": "7.0.0",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-pngquant": "9.0.2",
